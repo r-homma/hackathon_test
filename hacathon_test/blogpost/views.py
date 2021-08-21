@@ -28,3 +28,7 @@ class BlogUpdate(UpdateView):
     model = BlogModel
     fields = ('title', 'question', 'answer', 'category')
     success_url = reverse_lazy('list')
+
+class BlogChallenge(DetailView):
+    template_name = 'challenge.html'
+    model = BlogModel

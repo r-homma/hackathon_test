@@ -5,7 +5,7 @@ class SampleModel(models.Model):
     title = models.CharField(max_length=100)
     number = models.IntegerField()
 
-CATEGORY = (('business','ビジネス'),('life','生活'),('other','その他'))#('左','右')左：pythonの実装で表示される項目,右：htmlファイル上で表示される項目
+CATEGORY = (('network','ネットワーク'),('linux','lunux'),('other','その他'),('web','web'),('programming','プログラミング'))#('左','右')左：pythonの実装で表示される項目,右：htmlファイル上で表示される項目
 class BlogModel(models.Model):#以下で定義される変数は、全てオブジェクト
     title = models.CharField(max_length=100)
     question = models.TextField()

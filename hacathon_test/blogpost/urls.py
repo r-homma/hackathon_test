@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import BlogList, BlogDetail, BlogCreate, BlogDelete, BlogUpdate#viewで定義されるclass
+from .views import BlogList, BlogDetail, BlogCreate, BlogDelete, BlogUpdate, BlogChallenge#viewで定義されるclass
 
 urlpatterns = [
     path('list/', BlogList.as_view(), name='list'),
@@ -7,4 +7,5 @@ urlpatterns = [
     path('create/', BlogCreate.as_view(), name='create'),
     path('delete/<int:pk>', BlogDelete.as_view(), name='delete'),
     path('update/<int:pk>', BlogUpdate.as_view(), name='update'),
+    path('challenge/<int:pk>', BlogChallenge.as_view(), name='challenge')
 ]

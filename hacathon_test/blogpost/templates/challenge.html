@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div class = "page-name">
+    <h1>問題に挑戦！！！</h1>
+</div>
+<div class="card">
+    <h5 class="card-header">{{ object.category }}</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{ object.title }}</h5>
+      <h5 class="card-title">{{ object.question }}</h6>
+      <style type="text/css">
+        .inputSample {
+        width:200px;
+        font-size: 20pt;
+        padding: 5px;
+        background-color: #ccfffc;
+        border: 3px inset #1900ff;
+        </style>
+        <input type="text" name="in01" placeholder="回答欄" class="inputSample">
+      <a href="{% url 'update' object.pk %}" class="btn btn-primary">回答する</a>
+      <a href="{% url 'list' %}" class="btn btn-primary">問題一覧へ</a>
+      
+    </div>
+  </div>
+{% endblock content %}

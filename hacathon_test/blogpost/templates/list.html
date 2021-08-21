@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>soukiapp</title>
   </head>
   <body>
 {% extends 'base.html' %}
@@ -19,7 +19,7 @@
 {% block content %}
 
    <div class="container">
-<a href="{% url 'create' %}" class="btn btn-primary">新規作成</a>
+<a href="{% url 'create' %}" class="btn btn-primary">問題の作成</a>
    {% for item in object_list %}
    <div class="card">
       <h5 class="card-header">{{ item.category }}</h5>
