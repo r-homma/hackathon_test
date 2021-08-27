@@ -4,6 +4,9 @@
 {% endblock header %}
 
 {% block content %}
+<div class = "page-name">
+    <h1>問題を作成しましょう</h1>
+</div>
 <form action="" method="POST">{% csrf_token %}
     {{form.as_p}}
     <input type ="submit" value="作成する">

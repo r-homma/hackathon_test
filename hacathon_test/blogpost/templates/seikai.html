@@ -5,19 +5,15 @@
 
 {% block content %}
 <div class = "page-name">
-    <h1>問題に挑戦！！！</h1>
+    <h1>正解！！！</h1>
 </div>
 <div class="card">
     <h5 class="card-header">{{ object.category }}</h5>
     <div class="card-body">
       <h5 class="card-title">{{ object.title }}</h5>
-      <h5 class="card-title">{{ object.question }}</h6>
-      <form method="POST" action="{% url 'hantei' object.pk %}">{% csrf_token %}
-        <p>回答欄:<input type="text" name="kaitou"></p>
-        <p><input type="submit" value="回答する"></p>
-      </form>
+      <h6 class="card-title">{{ object.question }}</h6>
+      <h6 class="card-title">{{ object.answer }}</h6>
       <a href="{% url 'list' %}" class="btn btn-primary">問題一覧へ</a>
-      
     </div>
   </div>
 {% endblock content %}
